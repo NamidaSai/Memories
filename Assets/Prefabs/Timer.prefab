@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerDuration: 30
+  gameOverScreen: {fileID: 0}
+  currentTime: 0

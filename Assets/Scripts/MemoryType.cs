@@ -8,8 +8,8 @@ public class MemoryType : ScriptableObject
     [SerializeField] float maxScale = 2f;
     [SerializeField] float minWeight = 1f;
     [SerializeField] float maxWeight = 2f;
-    [SerializeField] float minScore = 5f;
-    [SerializeField] float maxScore = 10f;
+    [SerializeField] int minScore = 5;
+    [SerializeField] int maxScore = 10;
 
     public float GetScale()
     {
@@ -21,7 +21,7 @@ public class MemoryType : ScriptableObject
         return Random.Range(minWeight, maxWeight);
     }
 
-    public float GetScore()
+    public int GetScore()
     {
         return Random.Range(minScore, maxScore);
     }

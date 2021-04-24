@@ -5,11 +5,18 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [Tooltip("in seconds")]
-    [SerializeField] float timerDuration = 5f;
+    [SerializeField] public float timerDuration = 5f;
+    [SerializeField] GameObject gameOverScreen = default;
 
-    float currentTime = 0f;
+    [HideInInspector]
+    public float currentTime = 0f;
     bool maxTimeReached = false;
     bool timerStarted = false;
+
+    private void Start()
+    {
+        StartCoroutine(StartTimer());
+    }
 
     private void Update()
     {
@@ -23,6 +30,9 @@ public class Timer : MonoBehaviour
         {
             maxTimeReached = true;
             Debug.Log("Max Time Reached");
+            gameOverScreen.SetActive(true);
+            FindObjectOfType<PlayerController>().enabled = false;
+            FindObjectOfType<PlayerController>().GetComponent<Mover>().targetPosition = FindObjectOfType<PlayerController>().transform.position;
         }
     }
 
@@ -31,8 +41,9 @@ public class Timer : MonoBehaviour
         currentTime += Time.deltaTime;
     }
 
-    public void StartTimer()
+    IEnumerator StartTimer()
     {
+        yield return new WaitForSeconds(2f);
         timerStarted = true;
     }
 }

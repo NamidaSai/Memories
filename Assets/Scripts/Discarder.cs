@@ -15,6 +15,7 @@ public class Discarder : MonoBehaviour
         {
             if (collider2D.gameObject.GetComponent<Linker>().isLinked)
             {
+                FindObjectOfType<ScoreManager>().AddToScore(-collider2D.gameObject.GetComponent<Memory>().type.GetScore());
                 Destroy(collider2D.gameObject);
             }
         }

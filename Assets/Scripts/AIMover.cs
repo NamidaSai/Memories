@@ -9,7 +9,7 @@ public class AIMover : MonoBehaviour
 
     private void Start()
     {
-        wanderTimer = wanderCooldown;
+        wanderTimer = wanderCooldown - 0.2f;
     }
 
     private void Update()

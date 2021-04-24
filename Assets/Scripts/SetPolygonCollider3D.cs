@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
-using UnityEditor.SceneManagement;
+// using UnityEditor.SceneManagement;
 using System.Linq;
 
 // Source: https://answers.unity.com/questions/1484280/generate-2d-polygon-collider-from-3d-mesh.html

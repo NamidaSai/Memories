@@ -21,5 +21,5 @@ MonoBehaviour:
   maxScale: 2
   minWeight: 3
   maxWeight: 4
-  minScore: 3
-  maxScore: 4
+  minScore: 20
+  maxScore: 20
