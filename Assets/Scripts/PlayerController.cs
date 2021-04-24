@@ -29,5 +29,6 @@ public class PlayerController : MonoBehaviour
 
     private void Discard()
     {
+        GetComponent<Discarder>().DiscardTarget(mouseWorldPosition);
     }
 }

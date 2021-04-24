@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2928552089824390985}
   - component: {fileID: 2928552089824390984}
   - component: {fileID: 2928552089824390986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Memory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,8 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a65693db72794d498949a0dbf3b8beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForceIncrease: 2
-  maxSpeedIncrease: 200
+  linkingEnabled: 1
+  maxForceIncrease: 1.2
+  maxSpeedIncrease: 1.5
 --- !u!1 &2928552090033952028
 GameObject:
   m_ObjectHideFlags: 0
