@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d22ec0589324142aef2c607b026b2a, type: 3}
+  m_Name: SliceOfLife
+  m_EditorClassIdentifier: 
+  colorOptions:
+  - {r: 0.10588236, g: 0.6, b: 0.54509807, a: 1}
+  - {r: 0.3150943, g: 0.65524864, b: 1, a: 1}
+  - {r: 1, g: 0.49447766, b: 0.3622641, a: 1}
+  - {r: 0.2124955, g: 0.8867924, b: 0.6170736, a: 1}
+  minScale: 0.5
+  maxScale: 1
+  minWeight: 0.5
+  maxWeight: 0.6
+  minScore: 1
+  maxScore: 2

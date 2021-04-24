@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+    [SerializeField] public bool isWanderer = false;
+
     [SerializeField] float maxSpeed = 100;
     [SerializeField] float maxForce = 10;
     [SerializeField] float slowingRadius = 2f;
@@ -12,8 +14,9 @@ public class Mover : MonoBehaviour
     [SerializeField] float maxSpeedIncrease = 200f;
     [SerializeField] float maxSpeedDecrease = 200f;
 
-    private Vector2 targetPosition;
+    public Vector2 targetPosition;
     private Rigidbody2D thisRigidbody;
+
 
     public void SetTargetPosition(Vector2 position)
     {
@@ -35,13 +38,22 @@ public class Mover : MonoBehaviour
         SteerVehicle();
     }
 
+
+
     private void SteerVehicle()
     {
         Vector2 seek = SeekSteer();
 
         seek *= 0.5f;
 
-        thisRigidbody.AddForce(seek, ForceMode2D.Impulse);
+        if (!isWanderer)
+        {
+            thisRigidbody.AddForce(seek, ForceMode2D.Impulse);
+        }
+        else
+        {
+            thisRigidbody.AddForce(seek);
+        }
     }
 
     private Vector2 SeekSteer()

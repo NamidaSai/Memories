@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 2053081996511938575}
   - component: {fileID: 2053081996511938574}
   - component: {fileID: 2053081996511938569}
+  - component: {fileID: 1005875768}
+  - component: {fileID: 1005875769}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -112,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 2053081996511938563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2053081995648332694}
   m_Father: {fileID: 0}
@@ -257,10 +259,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13d52e5678770e746a5536f8a0bc1d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWanderer: 0
   maxSpeed: 500
   maxForce: 10
   slowingRadius: 2
-  maxForceIncrease: 1.1
-  maxForceDecrease: 0.9
-  maxSpeedIncrease: 1.5
-  maxSpeedDecrease: 0.5
+  maxForceIncrease: 2
+  maxForceDecrease: 2
+  maxSpeedIncrease: 200
+  maxSpeedDecrease: 200
+  targetPosition: {x: 0, y: 0}
+--- !u!114 &1005875768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053081996511938563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004ef3893d3cd4f4c88f8fafc964209e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  discardRadius: 0.2
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &1005875769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053081996511938563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b104b90ea1d2924aa49e9fc0a5aa8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAging: 0
+  scaleUpFactor: 0.1
+  maxScale: 5

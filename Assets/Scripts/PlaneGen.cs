@@ -7,11 +7,8 @@ public class PlaneGen : MonoBehaviour
 {
     [SerializeField] GameObject prefabToSpawn = default;
     [SerializeField] Material spriteMaterial;
-
-    private void Start()
-    {
-        SpawnMemory();
-    }
+    [SerializeField] MemoryType[] memoryTypes = default;
+    [SerializeField] int targetLayerIndex = 2;
 
     public void SpawnMemory()
     {
@@ -23,10 +20,25 @@ public class PlaneGen : MonoBehaviour
 
         // Assign sorting layer to behave as sprite
         SortingLayers3D sortingLayers = spawnedGameObject.AddComponent<SortingLayers3D>();
-        sortingLayers.index = 2;
+        sortingLayers.index = targetLayerIndex;
 
         // adjust Collider boundaries
         SetPolygonCollider3D.UpdatePolygonColliders(spawnedGameObject.transform);
+
+        // assign memory type
+        spawnedGameObject.GetComponent<Memory>().type = memoryTypes[Random.Range(0, memoryTypes.Length)];
+
+        // randomise scale
+        float targetScale = spawnedGameObject.GetComponent<Memory>().type.GetScale();
+        spawnedGameObject.transform.localScale = new Vector3(targetScale, targetScale, 1f);
+
+        // randomise weight
+        float targetWeight = spawnedGameObject.GetComponent<Memory>().type.GetWeight();
+        spawnedGameObject.GetComponent<Rigidbody2D>().mass = spawnedGameObject.GetComponent<Memory>().type.GetWeight();
+
+        // randomise color
+        Color targetColor = spawnedGameObject.GetComponent<Memory>().type.GetColor();
+        spawnedGameObject.GetComponent<MeshRenderer>().material.SetColor("_MainColor", targetColor);
     }
 
     private void GeneratePlane(GameObject spawnedGameObject)

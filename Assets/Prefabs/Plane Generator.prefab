@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &268741921284084540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268741921284084514}
+  - component: {fileID: 268741921284084515}
+  m_Layer: 0
+  m_Name: Plane Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268741921284084514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268741921284084540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268741921284084515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268741921284084540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0f797e85b38e42b7d6ba1ec4b27c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 2928552089824390988, guid: 53503eb22ecbff64b9090b8a14796e76, type: 3}
+  spriteMaterial: {fileID: 2100000, guid: b6263ef5c90c6c7459916c144324308d, type: 2}
+  memoryTypes:
+  - {fileID: 11400000, guid: 463ca6af406962e4f9b3327e25e5125a, type: 2}
+  - {fileID: 11400000, guid: ceb173bf79b58f845ad9537cd4dd24ec, type: 2}
+  - {fileID: 11400000, guid: 00ad4a99c2b78f149abc94a54f607fb9, type: 2}
+  - {fileID: 11400000, guid: 3f9f9c2d3d341b447a827d783771b076, type: 2}
+  targetLayerIndex: 2
