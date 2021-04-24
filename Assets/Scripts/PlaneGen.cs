@@ -10,9 +10,13 @@ public class PlaneGen : MonoBehaviour
     [SerializeField] MemoryType[] memoryTypes = default;
     [SerializeField] int targetLayerIndex = 2;
 
-    public void SpawnMemory()
+    public void SpawnMemory(Vector3 spawnLocation)
     {
-        Vector3 spawnLocation = transform.position;
+        if (spawnLocation == null)
+        {
+            spawnLocation = transform.position;
+        }
+
         GameObject spawnedGameObject = Instantiate(prefabToSpawn, spawnLocation, Quaternion.identity) as GameObject;
 
         // Create a 2D plane procedurally on our new Object

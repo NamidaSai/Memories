@@ -9,10 +9,6 @@ public class Mover : MonoBehaviour
     [SerializeField] float maxSpeed = 100;
     [SerializeField] float maxForce = 10;
     [SerializeField] float slowingRadius = 2f;
-    [SerializeField] float maxForceIncrease = 1f;
-    [SerializeField] float maxForceDecrease = 1f;
-    [SerializeField] float maxSpeedIncrease = 200f;
-    [SerializeField] float maxSpeedDecrease = 200f;
 
     public Vector2 targetPosition;
     private Rigidbody2D thisRigidbody;
@@ -75,17 +71,5 @@ public class Mover : MonoBehaviour
         Vector2 steer = desiredVelocity - thisRigidbody.velocity;
         steer = Vector2.ClampMagnitude(steer, maxForce);
         return steer;
-    }
-
-    public void IncreaseMoveSpeed()
-    {
-        maxForce += maxForceIncrease;
-        maxSpeed += maxSpeedIncrease;
-    }
-
-    public void DecreaseMoveSpeed()
-    {
-        maxForce -= maxForceDecrease;
-        maxSpeed -= maxSpeedDecrease;
     }
 }

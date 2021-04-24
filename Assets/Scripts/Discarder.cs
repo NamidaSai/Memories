@@ -16,7 +16,6 @@ public class Discarder : MonoBehaviour
             if (collider2D.gameObject.GetComponent<Linker>().isLinked)
             {
                 Destroy(collider2D.gameObject);
-                GetComponent<Mover>().DecreaseMoveSpeed();
             }
         }
     }

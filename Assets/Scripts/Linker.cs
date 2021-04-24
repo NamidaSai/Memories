@@ -16,7 +16,6 @@ public class Linker : MonoBehaviour
             {
                 GetComponent<FixedJoint2D>().enabled = true;
                 GetComponent<FixedJoint2D>().connectedBody = collision.gameObject.GetComponent<Rigidbody2D>();
-                collision.gameObject.GetComponent<Mover>().IncreaseMoveSpeed();
                 GetComponent<Mover>().enabled = false;
                 isLinked = true;
             }

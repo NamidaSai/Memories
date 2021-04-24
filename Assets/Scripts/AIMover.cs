@@ -5,7 +5,12 @@ public class AIMover : MonoBehaviour
     [SerializeField] float wanderRadius = 5f;
     [SerializeField] float wanderCooldown = 5f;
 
-    private float wanderTimer = 0f;
+    private float wanderTimer;
+
+    private void Start()
+    {
+        wanderTimer = wanderCooldown;
+    }
 
     private void Update()
     {

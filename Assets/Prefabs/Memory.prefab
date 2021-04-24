@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2928552089824390984}
   - component: {fileID: 2928552089824390986}
   - component: {fileID: 2540353524310505866}
+  - component: {fileID: -3336695583496062555}
   m_Layer: 9
   m_Name: Memory
   m_TagString: Untagged
@@ -112,16 +113,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2928552089824390988}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13d52e5678770e746a5536f8a0bc1d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWanderer: 1
-  wanderRadius: 5
-  wanderCooldown: 5
-  maxSpeed: 400
-  maxForce: 12
+  maxSpeed: 300
+  maxForce: 4
   slowingRadius: 0.2
   maxForceIncrease: 1.1
   maxForceDecrease: 0.9
@@ -155,3 +154,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 0}
+--- !u!114 &-3336695583496062555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928552089824390988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b43df2968f923d4d946e0a748f84134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderRadius: 50
+  wanderCooldown: 10
