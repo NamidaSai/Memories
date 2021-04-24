@@ -1,24 +1,35 @@
 using UnityEngine;
 using System.Collections;
 
+// source: https://forum.unity.com/threads/random-2d-shape-generation.376836/
+
 public class PlaneGen : MonoBehaviour
 {
+    [SerializeField] GameObject prefabToSpawn = default;
+    [SerializeField] Material spriteMaterial;
 
-    public Material spriteMaterial;
-
-    void Start()
+    private void Start()
     {
-
-        //Create a new GameObject named "Spawned GameObject (Plane)"
-        GameObject spawnedGameObject = new GameObject("Spawned GameObject (Plane)");
-
-        //Create a 2D plane procedurally on our new Object
-        GeneratePlane(spawnedGameObject);
-
+        SpawnMemory();
     }
 
+    public void SpawnMemory()
+    {
+        Vector3 spawnLocation = transform.position;
+        GameObject spawnedGameObject = Instantiate(prefabToSpawn, spawnLocation, Quaternion.identity) as GameObject;
 
-    void GeneratePlane(GameObject spawnedGameObject)
+        // Create a 2D plane procedurally on our new Object
+        GeneratePlane(spawnedGameObject);
+
+        // Assign sorting layer to behave as sprite
+        SortingLayers3D sortingLayers = spawnedGameObject.AddComponent<SortingLayers3D>();
+        sortingLayers.index = 2;
+
+        // adjust Collider boundaries
+        SetPolygonCollider3D.UpdatePolygonColliders(spawnedGameObject.transform);
+    }
+
+    private void GeneratePlane(GameObject spawnedGameObject)
     {
         // You can change that line to provide another MeshFilter
         MeshFilter filter = spawnedGameObject.AddComponent<MeshFilter>();
