@@ -13,7 +13,7 @@ public class Discarder : MonoBehaviour
 
         foreach (Collider2D collider2D in allCollidersInArea)
         {
-            if (collider2D.gameObject.GetComponent<Linker>().isLinked)
+            if (collider2D.gameObject.GetComponent<Linker>().isLinked && collider2D.gameObject.GetComponent<FixedJoint2D>().connectedBody.gameObject.tag == "Player")
             {
                 Memory targetMemory = collider2D.gameObject.GetComponent<Memory>();
                 FindObjectOfType<ScoreManager>().RemoveFromScore(targetMemory.type.GetScore(), targetMemory.type.GetMemType());

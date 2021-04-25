@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public float timerDuration = 5f;
     [SerializeField] GameObject gameOverScreen = default;
     [SerializeField] GameObject timerDisplay = default;
+    [SerializeField] float timerFXTriggerTime = 5f;
 
     [HideInInspector]
     public float currentTime = 0f;
@@ -22,6 +23,11 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         if (maxTimeReached || !timerStarted) { return; }
+
+        if (currentTime > (timerDuration - timerFXTriggerTime))
+        {
+            GetComponentInChildren<Animator>().SetTrigger("endTimer");
+        }
 
         if (currentTime < timerDuration)
         {
