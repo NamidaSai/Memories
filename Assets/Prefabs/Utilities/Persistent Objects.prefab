@@ -43,6 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02bd4e97a5c6dce49a5668359063d502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snippets:
+  - From a taste we loved to the death of a loved one, We are the sum of the memories
+    we gathered.
+  - Sad, happy, boring, exciting...                        A diverse experience makes
+    us more complete.
+  - Life is short. Don't waste a second of it.     Better to roam aimless than stand
+    still.
+  - Some are born with an advantage.                   It doesn't mean you should
+    give up.
+  - Sometimes it's better to forget                     To make room for new memories.
+  - Accidents happen. Our mind is not always our own. Learn from your mistakes, learn
+    to move on.
   hasSwitchedMusic: 0
 --- !u!1 &303607791129768207
 GameObject:

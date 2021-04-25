@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SettingsHolder : MonoBehaviour
 {
+    [SerializeField] string[] snippets = default;
+
+    int currentSnippetIndex = 0;
     private float sfxVolume = 0.5f;
     private float musicVolume = 0.5f;
 
@@ -40,5 +43,22 @@ public class SettingsHolder : MonoBehaviour
     {
         musicVolume = value;
         musicPlayer.SetMusicVolume(value);
+    }
+
+    public string GetCurrentSnippet()
+    {
+        return snippets[currentSnippetIndex];
+    }
+
+    public void IncrementSnippetIndex()
+    {
+        if (currentSnippetIndex < snippets.Length)
+        {
+            currentSnippetIndex++;
+        }
+        else
+        {
+            currentSnippetIndex = 0;
+        }
     }
 }

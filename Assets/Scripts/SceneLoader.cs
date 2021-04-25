@@ -53,6 +53,17 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneWithTransition(currentSceneIndex));
     }
 
+    public void NextSnippetAfterLoad()
+    {
+        StartCoroutine(DelayedSnippet());
+    }
+
+    private IEnumerator DelayedSnippet()
+    {
+        yield return new WaitForSeconds(1f);
+        FindObjectOfType<SettingsHolder>().IncrementSnippetIndex();
+    }
+
     public void QuitGame()
     {
         Application.Quit();
