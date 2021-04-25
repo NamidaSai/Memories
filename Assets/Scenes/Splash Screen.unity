@@ -460,11 +460,11 @@ PrefabInstance:
       objectReference: {fileID: 929633034}
     - target: {fileID: 7914787382713889574, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 30
+      value: 16.89393
       objectReference: {fileID: 0}
     - target: {fileID: 7914787383646528240, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: orthographic size
-      value: 30
+      value: 16.89393
       objectReference: {fileID: 0}
     - target: {fileID: 7914787383684439548, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: m_Name

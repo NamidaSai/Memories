@@ -5,6 +5,8 @@ using UnityEngine;
 public class Linker : MonoBehaviour
 {
     [SerializeField] bool linkingEnabled = true;
+    [SerializeField] GameObject linkFXPrefab = default;
+    [SerializeField] float linkFXDuration = 1f;
 
     public bool isLinked = false;
 
@@ -22,6 +24,12 @@ public class Linker : MonoBehaviour
                 Memory memory = GetComponent<Memory>();
                 FindObjectOfType<ScoreManager>().AddToScore(memory.type.GetScore(), memory.type.GetMemType());
                 FindObjectOfType<AudioManager>().Play("linked");
+                GameObject linkFX = Instantiate(linkFXPrefab, collision.transform.position, collision.transform.rotation) as GameObject;
+                ParticleSystem.MainModule newMain = linkFX.GetComponent<ParticleSystem>().main;
+                newMain.startColor = collision.gameObject.GetComponentInChildren<SpriteRenderer>().color;
+                linkFX.transform.parent = collision.transform;
+                linkFX.transform.localScale = collision.transform.localScale;
+                Destroy(linkFX, linkFXDuration);
                 isLinked = true;
             }
             else
@@ -35,6 +43,12 @@ public class Linker : MonoBehaviour
             GetComponent<FixedJoint2D>().enabled = true;
             GetComponent<FixedJoint2D>().connectedBody = collision.gameObject.GetComponent<Rigidbody2D>();
             GetComponent<Mover>().enabled = false;
+            GameObject linkFX = Instantiate(linkFXPrefab, collision.transform.position, collision.transform.rotation) as GameObject;
+            ParticleSystem.MainModule newMain = linkFX.GetComponent<ParticleSystem>().main;
+            newMain.startColor = collision.gameObject.GetComponentInChildren<SpriteRenderer>().color;
+            linkFX.transform.parent = collision.transform;
+            linkFX.transform.localScale = collision.transform.localScale;
+            Destroy(linkFX, linkFXDuration);
             isLinked = true;
         }
     }

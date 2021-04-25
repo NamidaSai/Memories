@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkingEnabled: 1
+  linkFXPrefab: {fileID: 9091661513002728158, guid: c249ac9f10745f548b5972ffa979d0d3, type: 3}
+  linkFXDuration: 1
   isLinked: 0
 --- !u!114 &2540353524310505866
 MonoBehaviour:
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c739b01e206bee4fbe658cc2f46f2ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  discardFX: {fileID: 0}
+  discardFX: {fileID: 9091661513002728158, guid: 18323eb8ba23d3a4c94b2b2f3be917b0, type: 3}
   deathFXDuration: 2
   type: {fileID: 0}
 --- !u!114 &-3336695583496062555

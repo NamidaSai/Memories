@@ -209,7 +209,7 @@ MonoBehaviour:
   sounds:
   - name: linked
     clip: {fileID: 8300000, guid: b032136c336261d47a3999969cec1691, type: 3}
-    volume: 0.12
+    volume: 0.1
     pitch: 1
     randomPitch: 1
     loop: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: move
     clip: {fileID: 8300000, guid: 5b09208396800be4f827442eac831c42, type: 3}
-    volume: 0.15
+    volume: 0.4
     pitch: 1
     randomPitch: 1
     loop: 0
