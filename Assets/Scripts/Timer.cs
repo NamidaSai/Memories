@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     [Tooltip("in seconds")]
     [SerializeField] public float timerDuration = 5f;
     [SerializeField] GameObject gameOverScreen = default;
+    [SerializeField] GameObject timerDisplay = default;
 
     [HideInInspector]
     public float currentTime = 0f;
@@ -33,6 +34,7 @@ public class Timer : MonoBehaviour
             gameOverScreen.SetActive(true);
             FindObjectOfType<PlayerController>().enabled = false;
             FindObjectOfType<PlayerController>().GetComponent<Mover>().targetPosition = FindObjectOfType<PlayerController>().transform.position;
+            timerDisplay.SetActive(false);
         }
     }
 

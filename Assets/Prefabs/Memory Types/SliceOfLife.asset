@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d22ec0589324142aef2c607b026b2a, type: 3}
   m_Name: SliceOfLife
   m_EditorClassIdentifier: 
+  type: 2
   colorOptions:
   - {r: 0.5164827, g: 0.8773585, b: 0.83683234, a: 1}
   - {r: 0.3150943, g: 0.65524864, b: 1, a: 1}

@@ -1,8 +1,17 @@
 using UnityEngine;
 
+public enum MemType
+{
+    Joy,
+    Sad,
+    SliceOfLife,
+    Trauma
+}
+
 [CreateAssetMenu(fileName = "MemoryType", menuName = "Memories/MemoryType", order = 0)]
 public class MemoryType : ScriptableObject
 {
+    [SerializeField] MemType type = default;
     [SerializeField] Color[] colorOptions = default;
     [SerializeField] float minScale = 1f;
     [SerializeField] float maxScale = 2f;
@@ -29,5 +38,10 @@ public class MemoryType : ScriptableObject
     public Color GetColor()
     {
         return colorOptions[Random.Range(0, colorOptions.Length)];
+    }
+
+    public MemType GetMemType()
+    {
+        return type;
     }
 }

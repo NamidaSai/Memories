@@ -19,10 +19,10 @@ public class SceneLoader : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(transitionDelay);
-        // if (currentSceneIndex == 0)
-        // {
-        //     LoadNextScene();
-        // }
+        if (currentSceneIndex == 0)
+        {
+            LoadNextScene();
+        }
     }
 
     public void LoadMenu()

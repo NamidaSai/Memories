@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d22ec0589324142aef2c607b026b2a, type: 3}
   m_Name: Trauma
   m_EditorClassIdentifier: 
+  type: 3
   colorOptions:
   - {r: 0.21960786, g: 0.2392157, b: 0.23137257, a: 1}
   - {r: 0.08373084, g: 0.11320752, b: 0.10141685, a: 1}
