@@ -7,6 +7,17 @@ public class PlayerController : MonoBehaviour
 {
     Vector2 mouseWorldPosition;
 
+    private void Start()
+    {
+        StartCoroutine(LateStart());
+    }
+
+    IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(0.1f);
+        FindObjectOfType<AudioManager>().Play("start");
+    }
+
     private void Update()
     {
         mouseWorldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -25,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         GetComponent<Mover>().SetTargetPosition(mouseWorldPosition);
+        FindObjectOfType<AudioManager>().Play("move");
     }
 
     private void Discard()

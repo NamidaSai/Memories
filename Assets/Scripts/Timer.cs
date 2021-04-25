@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
             gameOverScreen.SetActive(true);
             FindObjectOfType<PlayerController>().enabled = false;
             FindObjectOfType<PlayerController>().GetComponent<Mover>().targetPosition = FindObjectOfType<PlayerController>().transform.position;
+            FindObjectOfType<AudioManager>().Play("ring");
             timerDisplay.SetActive(false);
         }
     }

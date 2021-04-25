@@ -437,6 +437,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Persistent Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 6624920619646808748, guid: b4c31ce0505135a419267c499213f869, type: 3}
+      propertyPath: tracks.Array.data[0].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624920619646808748, guid: b4c31ce0505135a419267c499213f869, type: 3}
+      propertyPath: tracks.Array.data[1].volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c31ce0505135a419267c499213f869, type: 3}
 --- !u!1001 &1907194658
@@ -452,11 +460,11 @@ PrefabInstance:
       objectReference: {fileID: 929633034}
     - target: {fileID: 7914787382713889574, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 21.64667
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7914787383646528240, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: orthographic size
-      value: 21.64667
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7914787383684439548, guid: a8965a728fe74a14895dd986fc236a9d, type: 3}
       propertyPath: m_Name

@@ -15,6 +15,8 @@ public class Memory : MonoBehaviour
         }
         Destroy(discardFX, deathFXDuration);
 
+        FindObjectOfType<AudioManager>().Play("faint");
+
         if (GetComponent<Animator>() != null)
         {
             GetComponent<Animator>().SetTrigger("isDead");

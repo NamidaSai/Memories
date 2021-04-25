@@ -21,6 +21,7 @@ public class Linker : MonoBehaviour
                 GetComponent<Mover>().enabled = false;
                 Memory memory = GetComponent<Memory>();
                 FindObjectOfType<ScoreManager>().AddToScore(memory.type.GetScore(), memory.type.GetMemType());
+                FindObjectOfType<AudioManager>().Play("linked");
                 isLinked = true;
             }
             else

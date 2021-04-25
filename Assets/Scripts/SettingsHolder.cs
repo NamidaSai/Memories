@@ -8,8 +8,8 @@ public class SettingsHolder : MonoBehaviour
     [SerializeField] string[] snippets = default;
 
     int currentSnippetIndex = 0;
-    private float sfxVolume = 0.5f;
-    private float musicVolume = 0.5f;
+    private float sfxVolume = 1f;
+    private float musicVolume = 1f;
 
 
     private MusicPlayer musicPlayer;

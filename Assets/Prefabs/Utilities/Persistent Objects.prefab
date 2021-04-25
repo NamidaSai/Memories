@@ -52,7 +52,7 @@ MonoBehaviour:
     still.
   - Some are born with an advantage.                   It doesn't mean you should
     give up.
-  - Sometimes it's better to forget                     To make room for new memories.
+  - Sometimes it's better to forget                     And make room for new memories.
   - Accidents happen. Our mind is not always our own. Learn from your mistakes, learn
     to move on.
   hasSwitchedMusic: 0
@@ -145,8 +145,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330e96a10662f43488cc1744c77a13f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracks: []
-  startingTrack: 
+  tracks:
+  - name: Intro
+    clip: {fileID: 8300000, guid: eaebdee049c2f124da4ee50f968bc467, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: Main
+    clip: {fileID: 8300000, guid: 5f2213c0908efa54f95921bb25576446, type: 3}
+    volume: 1
+    pitch: 1
+    randomPitch: 0
+    loop: 1
+    stopOnPause: 0
+    source: {fileID: 0}
+  startingTrack: Intro
 --- !u!1 &6624920620608409040
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,4 +206,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b484035f44fe05643a16af762eaa1ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: linked
+    clip: {fileID: 8300000, guid: b032136c336261d47a3999969cec1691, type: 3}
+    volume: 0.12
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 1
+    source: {fileID: 0}
+  - name: discard
+    clip: {fileID: 8300000, guid: 92bb433bcceedac4b8e9b1b3df42e79d, type: 3}
+    volume: 0.2
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 1
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: bdc9dcd960fb8f4459aca39bab6d05de, type: 3}
+    volume: 0.05
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: move
+    clip: {fileID: 8300000, guid: 5b09208396800be4f827442eac831c42, type: 3}
+    volume: 0.15
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 1
+    source: {fileID: 0}
+  - name: ring
+    clip: {fileID: 8300000, guid: 0650e1ba57ec3f04390e4b38e84424a3, type: 3}
+    volume: 0.1
+    pitch: 1
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: start
+    clip: {fileID: 8300000, guid: 54a9edb5f1d46fa428080207cb95585f, type: 3}
+    volume: 0.6
+    pitch: 1
+    randomPitch: 0
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}
+  - name: faint
+    clip: {fileID: 8300000, guid: 92bb433bcceedac4b8e9b1b3df42e79d, type: 3}
+    volume: 0.05
+    pitch: 3
+    randomPitch: 1
+    loop: 0
+    stopOnPause: 0
+    source: {fileID: 0}

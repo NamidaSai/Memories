@@ -17,6 +17,7 @@ public class Discarder : MonoBehaviour
             {
                 Memory targetMemory = collider2D.gameObject.GetComponent<Memory>();
                 FindObjectOfType<ScoreManager>().RemoveFromScore(targetMemory.type.GetScore(), targetMemory.type.GetMemType());
+                FindObjectOfType<AudioManager>().Play("discard");
                 targetMemory.Discard();
             }
         }

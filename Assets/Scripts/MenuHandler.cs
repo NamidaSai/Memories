@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
-    [SerializeField] const string MAIN_TRACK = default;
+    const string MAIN_TRACK = "Main";
     [SerializeField] GameObject tutorialMenu = default;
     [SerializeField] GameObject optionsMenu = default;
     [SerializeField] Button playButton = default;

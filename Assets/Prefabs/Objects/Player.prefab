@@ -149,8 +149,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 0.4
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -263,10 +263,6 @@ MonoBehaviour:
   maxSpeed: 500
   maxForce: 10
   slowingRadius: 2
-  maxForceIncrease: 2
-  maxForceDecrease: 2
-  maxSpeedIncrease: 200
-  maxSpeedDecrease: 200
   targetPosition: {x: 0, y: 0}
 --- !u!114 &1005875768
 MonoBehaviour:

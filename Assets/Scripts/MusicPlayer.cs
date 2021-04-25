@@ -9,6 +9,8 @@ public class MusicPlayer : MonoBehaviour
     [SerializeField] Sound[] tracks = null;
     [SerializeField] string startingTrack = null;
 
+    public static MusicPlayer instance;
+
     private Sound currentTrack = null;
 
     void Awake()
@@ -45,9 +47,7 @@ public class MusicPlayer : MonoBehaviour
 
         if (currentTrack != null && currentTrack.source.isPlaying)
         {
-            if (currentTrack.source == track.source) { return; }
-            currentTrack.source.Stop();
-            track.source.Play();
+            StartCoroutine(SwitchTrack(track));
             return;
         }
 
