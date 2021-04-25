@@ -52,7 +52,7 @@ public class SettingsHolder : MonoBehaviour
 
     public void IncrementSnippetIndex()
     {
-        if (currentSnippetIndex < snippets.Length)
+        if (currentSnippetIndex < snippets.Length - 1)
         {
             currentSnippetIndex++;
         }
