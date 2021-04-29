@@ -5,14 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Splash Screen.unity
     guid: 30ff76d3b63cefd48b4285c080807438
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start Menu.unity
     guid: c504eb759b2881043aa682ff418facdf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Game.unity
     guid: 5d60bed038ed7ba4bbbca91046eae9a0
+  - enabled: 1
+    path: Assets/Scenes/Music Video Splash.unity
+    guid: 3080ca1cb41d02d4791f3ce6abfc57c8
+  - enabled: 1
+    path: Assets/Scenes/Wallpaper.unity
+    guid: 7bdc77b24d696624a863b8a1c5499756
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7bd34f87cf7fdba44a8b1be9447ad7b5, type: 2}

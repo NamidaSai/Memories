@@ -148,7 +148,7 @@ MonoBehaviour:
   tracks:
   - name: Intro
     clip: {fileID: 8300000, guid: eaebdee049c2f124da4ee50f968bc467, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     randomPitch: 0
     loop: 1
@@ -156,7 +156,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Main
     clip: {fileID: 8300000, guid: 5f2213c0908efa54f95921bb25576446, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     randomPitch: 0
     loop: 1

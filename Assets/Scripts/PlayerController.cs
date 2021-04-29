@@ -43,4 +43,10 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<Discarder>().DiscardTarget(mouseWorldPosition);
     }
+
+    private void OnReload()
+    {
+        Debug.Log("Should reload");
+        FindObjectOfType<SceneLoader>().ResetScene();
+    }
 }
