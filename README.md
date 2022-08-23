@@ -1,6 +1,7 @@
 # memories.io
 We Are the Sum of Our Memories
 
+Official release page: https://namidasai.itch.io/memories
 
 \------------------------------
 
